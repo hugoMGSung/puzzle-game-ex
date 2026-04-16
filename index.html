@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단한 퍼즐 게임 UI</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="game-layout">
+        <header class="game-header">
+          <p class="eyebrow">Puzzle Game</p>
+          <h1>간단한 퍼즐 게임</h1>
+          <p class="description">
+            같은 모양을 맞히는 퍼즐 게임을 만들기 위한 기본 화면입니다.
+            지금은 게임 로직 없이 화면 뼈대만 준비한 상태입니다.
+          </p>
+        </header>
+
+        <section class="status-panel" aria-label="게임 상태">
+          <div class="status-card">
+            <span class="status-label">시도 횟수</span>
+            <strong id="attempt-count" class="status-value">0</strong>
+          </div>
+
+          <div class="status-card">
+            <span class="status-label">현재 점수</span>
+            <strong id="score-count" class="status-value">0</strong>
+          </div>
+
+          <button id="reset-button" class="reset-button" type="button">
+            다시 시작
+          </button>
+        </section>
+
+        <section class="board-section" aria-label="게임판">
+          <div class="board-header">
+            <h2>게임판 영역</h2>
+            <p>나중에 퍼즐 카드나 블록이 들어갈 자리입니다.</p>
+          </div>
+
+          <div id="game-board" class="game-board"></div>
+        </section>
+
+        <p id="guide-text" class="guide-text">
+          퍼즐 로직을 추가하기 전 단계이므로, 타일을 누르면 시도 횟수만 올라갑니다.
+        </p>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
